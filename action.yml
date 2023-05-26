@@ -1,0 +1,13 @@
+name: 'Set git URL'
+description: 'Add your Github username and access token to your remote URL'
+inputs:
+  username:
+    description: 'The Github username you want to auth with'
+    required: false
+    default: ''
+  token:
+    description: 'Your Github access token'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
