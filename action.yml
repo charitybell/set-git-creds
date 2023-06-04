@@ -4,10 +4,11 @@ inputs:
   username:
     description: 'The Github username you want to auth with'
     required: false
-    default: ''
+    default: ${{ github.actor }}
   token:
     description: 'Your Github access token'
-    required: true
+    required: false
+    default: ${{ github.token }}
 runs:
   using: 'node16'
   main: 'index.js'

@@ -4,14 +4,10 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
-  let username = core.getInput('username', { required: false });
-  if (username === '') {
-    username = github.context.actor;
-  }
-
-  const token = core.getInput('token', { required: true });
-
+  const username = core.getInput('username', { required: false });
+  const token = core.getInput('token', { required: false });
   core.setSecret(token);
+
   const {owner, repo} = github.context.repo;
   const url = `https://${username}:${token}@${github.context.serverUrl.replace('https://', '')}/${owner}/${repo}`;
 

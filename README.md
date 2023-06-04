@@ -13,8 +13,8 @@ git remote set-url origin https://${{ github.actor }}:${{ github.token }}@"$(ech
 ```yaml
 - uses: charitybell/set-git-url-action@main
   with:
-    token: ${{ github.token }}
-    username: charitybell  # optional
+    token: ${{ github.token }} # optional
+    username: charitybell # optional
 ```
 
 `token` can be `${{ github.token }}`, or a personal access token, but not a password.
@@ -23,10 +23,10 @@ See [.github/workflows/main.yml](https://github.com/charitybell/set-git-creds/bl
 
 ## Inputs
 
-| input    | description                               | required | default            |
-|----------|-------------------------------------------|----------|--------------------|
-| username | The GitHub username you want to auth with | no       | ${{ gitub.actor }} |
-| token    | Your GitHub access token                  | yes      |                    |
+| input    | description                               | required | default             |
+|----------|-------------------------------------------|----------|---------------------|
+| username | The GitHub username you want to auth with | no       | ${{ gitub.actor }}  |
+| token    | Your GitHub access token                  | no       | ${{ github.token }} |
 
 ## License
 
