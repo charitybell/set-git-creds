@@ -11,7 +11,7 @@ git remote set-url origin https://${{ github.actor }}:${{ github.token }}@"$(ech
 ## Usage
 
 ```yaml
-- uses: charitybell/set-git-url-action@main
+- uses: charitybell/set-git-creds@main
   with:
     token: ${{ github.token }} # optional
     username: charitybell # optional
